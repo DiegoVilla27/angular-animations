@@ -1,0 +1,14 @@
+<header>
+  <nav>
+    <ul>
+      <li><a [routerLink]="['/']" routerLinkActive="active">Home</a></li>
+      <li>
+        <a [routerLink]="['/animation']" routerLinkActive="active">Animation</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<div [@routeAnimations]="prepareRoute(outlet)">
+  <router-outlet #outlet="outlet"></router-outlet>
+</div>
